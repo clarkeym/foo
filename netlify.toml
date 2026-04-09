@@ -1,0 +1,17 @@
+[build]
+  command = "npm run build"
+  functions = "netlify/functions"
+  publish = "web/dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+[dev]
+  command = "npm run dev --prefix web"
+  functions = "netlify/functions"
+  port = 5173
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
