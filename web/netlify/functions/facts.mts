@@ -1,6 +1,6 @@
 const API_ENDPOINT = "https://jsonplaceholder.typicode.com/posts";
 
-export default async (request, context) => {
+export default async (_request: Request, _context: any) => {
   try {
     const response = await fetch(API_ENDPOINT);
     const data = (await response.json()) as any[];
